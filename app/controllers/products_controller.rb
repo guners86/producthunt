@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   def create
   	@product = Product.new(product_params)
   	if @product.save
-  		redirect_to '/products', notice: "El producto ha sido creado con éxito"
+  		redirect_to products_path, notice: "El producto ha sido creado con éxito"
   	else
   		render :new 
   	end
@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
-      redirect_to "/products", notice: "El producto fue modificado con éxito"
+      redirect_to products_path, notice: "El producto fue modificado con éxito"
     else
       render :edit
     end
