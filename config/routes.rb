@@ -17,6 +17,6 @@ Rails.application.routes.draw do
 	# Configuracion para mostrar todas las rutas excepto index y new
 	# vresources :products, except: [:index, :new]
 
-  	get '/welcome', to:'welcome#index'
+  	root 'products#index'
   	
 end
