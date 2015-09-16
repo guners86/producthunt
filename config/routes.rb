@@ -18,5 +18,8 @@ Rails.application.routes.draw do
 	# vresources :products, except: [:index, :new]
 
   	root 'products#index'
+
+  	resources :users, only: [:new, :create]
+
   	
 end
