@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   	get 'login', to: 'sessions#new'
   	post 'login', to: 'sessions#create'
+  	delete 'logout', to: 'sessions#destroy'
 
 	# get '/products', to:'products#index', as: :products
 	# get '/products/new', to: 'products#new', as: :new_product
