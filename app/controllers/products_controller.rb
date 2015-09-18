@@ -1,5 +1,8 @@
 class ProductsController < ApplicationController
 
+  # Valida que metodos estan restringidos para usuarios no logeados
+  before_action :private_access, except: [:index, :show]
+
   def index
   	@products = Product.all
   end
