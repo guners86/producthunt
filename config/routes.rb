@@ -13,7 +13,9 @@ Rails.application.routes.draw do
 	# delete '/products/:id', to: 'products#destoy'
 
 	# Recurso que abstrae todas las configuraciones anteriores del producto
-	resources :products
+	resources :products do
+	  resources :comments, only: [:create] # ruta de comentarios asociado al producto
+	end
 
 	# Configuracion para mostrar solo las rutas deseadas en este caso index y new
 	# resources :products, only: [:index, :new]
