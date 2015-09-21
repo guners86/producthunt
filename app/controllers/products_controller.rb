@@ -13,6 +13,7 @@ class ProductsController < ApplicationController
 
   def create
   	@product = Product.new(product_params)
+    @product.user = current_user # Se llama a la funcion de application_controller que trae el usuario que esta logeado
   	if @product.save
   		redirect_to products_path, notice: "El producto ha sido creado con éxito"
   	else
