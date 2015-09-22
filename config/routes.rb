@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 	# Recurso que abstrae todas las configuraciones anteriores del producto
 	resources :products do
 	  resources :comments, only: [:create] # ruta de comentarios asociado al producto
+	  resource :vote, only: [:create, :destroy]
 	end
 
 	# Configuracion para mostrar solo las rutas deseadas en este caso index y new
