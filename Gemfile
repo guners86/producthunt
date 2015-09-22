@@ -31,6 +31,9 @@ gem 'gravatar-ultimate'
 # Anotacion en los modelos
 gem 'annotate'
 
+# Gema para el manejo de Imagenes
+gem "paperclip", "~> 4.3"
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
